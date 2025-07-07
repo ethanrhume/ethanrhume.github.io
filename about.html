@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethan Hume</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-row">
+      <div>
+        <h1><a href = "index.html">Ethan Hume</a></h1>
+        <p>exploring environmental health, epidemiology & evidence-based policy</p>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <img src="images/headshot.jpeg" alt="Ethan Hume" class="about-photo"/>
+      <p>I am a second-year Master's student in Health Services at the University of 
+        Washington. The M.S. Health Services program focuses on building a strong skill 
+        set in research methodology and analytics, with the end goal of addressing 
+        population health issues through program implementation and policy change. A 
+        core philosophy is the importance of evidence-driven decision-making in public 
+        health and beyond. I center my own work around the human impacts of 
+        anthropogenic climate change, disasters, and resultant disparities. As our planet
+        continues to heat up and environmental hazards become more difficult to predict,
+        we all are responsible for stepping up to the plate and promoting rapid 
+        adaptation and resilience.</p>
+
+      <p>As a "storyteller" at heart, I believe I have an important role to play in this 
+        work. By communicating my own and others' research findings in compelling and 
+        accessible ways, I can drive engagement amongst the public as well as policymakers
+        and be a catalyst for decisive action.</p>
+
+      <p>My background in healthcare helped me arrive where I am today. I worked as an
+        EMT in New Orleans, Lousiana for several years. During that time, I treated 
+        patients through multiple hurricanes, a tornado, and the Covid pandemic. I saw 
+        the way these disasters combined with existing socioeconomic injustices to 
+        exacerbate health disparities. On moving back home to Seattle, I began to work 
+        in the Medicaid space as a community health worker. I helped patients navigate 
+        homelessness and chronic health conditions during extreme heat events and 
+        winter storms, often with no wider system in place to assist. It's these 
+        experiences and more which motivate my interest in environmental justice and 
+        policy work.</p>
+
+      <p>Included below are highlights from my CV, or head over to the 
+        <b><a href = "projects.html">Projects</a></b> gallery to further explore some 
+        of my work. Of course, don't hesitate to reach out and chat at my 
+        <b><a href = mailto:erhume@uw.edu">email</a></b>.</p>
+    </section>
+        <section>
+      <h2>Outside of Work</h2>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ethan Hume</p>
+  </footer>
+    <script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburgerBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+        hamburgerBtn.classList.toggle('open'); // Add this line
+    });
+    </script>
+</body>
+</html>

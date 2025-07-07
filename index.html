@@ -6,20 +6,41 @@
   <title>Ethan Hume</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header>
-    <h1>Ethan Hume</h1>
+    <div class="header-row">
+      <div>
+        <h1><a href = "index.html">Ethan Hume</a></h1>
+        <p>exploring environmental health, epidemiology & evidence-based policy</p>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
     <section>
-      <h2>Hey there!</h2>
-      <p>Feel free to poke around and see what I'm working on. My current interests are centered around environmental justice
-        and climate change. This coming year, I'll be finishing up my Master's in Health Services at the Univeristy of 
-        Washington. Afterwards, I hope to continue promoting a clean environment and equitable health outcomes through 
-        data-driven storytelling. This site is designed to serve primarily as a professional portfolio, as well as a way to 
-        keep friends and family updated on my latest work. Please don't hesitate to reach out and start a conversation!
-      </p>
+      <h2>Welcome!</h2>
+      <p>Feel free to poke around and see what I'm working on. My interests are centered 
+        around environmental justice and climate change. This coming year, I'll be 
+        finishing up my Master's in Health Services at the Univeristy of Washington. 
+        Afterwards, I hope to continue promoting a clean environment and equitable health 
+        outcomes through data-driven storytelling. This site is designed to serve 
+        primarily as a professional portfolio, as well as a way to keep friends and 
+        family updated on what I'm up to. Please don't hesitate to reach out and start 
+        a conversation!</p>
     </section>
 
     <section>
@@ -43,5 +64,13 @@
   <footer>
     <p>&copy; 2025 Ethan Hume</p>
   </footer>
+  <script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburgerBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('open'); 
+    });
+  </script>
 </body>
 </html>
