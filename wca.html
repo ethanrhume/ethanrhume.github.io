@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethan Hume</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-row">
+      <div>
+        <h1><a href = "index.html">Ethan Hume</a></h1>
+        <p>exploring environmental health, epidemiology & evidence-based policy</p>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      
+      <div class="hero-image-container">
+        <img src="images/smoke.jpeg" alt="Wildfire Smoke" class="hero-image-wca" />
+        <h2 class="hero-title">Wildfire Smoke in Yakima County, WA</h2>
+        <p class="image-credit"><a class="credit-link" 
+            href="https://commons.wikimedia.org/wiki/File:Retreat_fire_from_head_of_Rimrock_Lake.jpg">
+            U.S. Forest Service</a>, Public domain, via Wikimedia Commons</p>
+      </div>
+      
+      <div class = "callout">
+        <p>This project is still under construction. Expect a full report below in the 
+          coming months. In the meantime, head over to the 
+          <a href="https://github.com/ethanrhume/yakima_air"><b>Github repo</b></a> 
+          to check in on my progress.</p>
+      </div>
+
+      <h3>Description</h3>
+      <p>The greater Yakima region experiences a significantly increased level of fine 
+        particulate matter (PM2.5) pollution as compared to other areas in Washington 
+        [CITE], which is linked to elevated incidence of lung disease and all-cause 
+        mortality [CITE]. Wildfire smoke is a primary driver of PM2.5 pollution in the 
+        region [CITE] and must be mitigated to improve health outcomes for this 
+        population.</p>
+
+      <p>In 2021, the Washington Legislature passed the Climate Commitment Act (CCA), 
+        which directed the Department of Ecology to define communities which are 
+        overburdened by criteria air pollutants. Through this process, sixteen 
+        communities were identified including three surrounding Yakima: East Yakima, 
+        Lower Yakima Valley, and Moxee Valley.</p>
+
+      <p>This project aims to describe the outsized burden of air pollution, from all 
+        sources as well as from wildfires specifically, in Yakima county. I then identify
+        and evaluate potential policy items to alleviate the burden in this region. I 
+        conducted this analysis in partnership with staff from Washington Conservation
+        Action (WCA), a non-profit conservation oriented policy group in WA state.</p>
+
+      <h3>Acknowledgements</h3>
+      <p>Much thanks to the team at Washington Conservation Action for guiding this work
+        and providing mentorship and oversight. Thank you also to the various faculty 
+        at the University of Washington Department of Health Systems & Population Health
+        who lent their advice and expertise through this process.</p>
+
+      <div align = "center">
+      <a href = "https://waconservationaction.org/">
+        <img src = "images/combined_logo_wca.svg"
+        alt = "WCA and HSPop">
+      </a>
+      </div>
+
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Ethan Hume</p>
+  </footer>
+  <script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburgerBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('open'); 
+    });
+  </script>
+</body>
+</html>
