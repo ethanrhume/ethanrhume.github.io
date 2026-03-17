@@ -43,48 +43,480 @@
       </div>
       
       <div class = "callout">
-        <p>This project is still under construction. Expect a full report below in the 
-          coming month. In the meantime, head over to the 
-          <a href="https://github.com/ethanrhume/wwcdch"><b>Github repo</b></a> 
-          to check in on my progress.</p>
+        <p>This is an adaptation of a report given to the Walla Walla County 
+        Department of Community Health. It does not include any raw data per the 
+        terms of the DUA signed with the County, and as such some interactive 
+        apps have been replaced with recordings to demonstrate their intended 
+        functionality.</p>
       </div>
 
-      <h3>Description</h3>
-      <p>Walla Walla County has experienced the highest enteric disease burden by county
-        in Washington State for several consecutive years. Enteric diseases (or 
-        gastrointestinal illnesses) are typically notifiable conditions due to their 
-        relatively high virulence. Although surveillance is in place for these conditions, 
-        the County has historically lacked the resources to dive deeply into this data 
-        in-house. This has limited the ability to design effective popilation health 
-        initiatives, which benefit from rich longitudinal data analysis.</p>
-
-      <p>The COVID-19 pandemic motivated an expansion for the Walla Walla County Department 
-        of Community Health (WWCDCH) epidemiology staff, which has since allowed for 
-        ongoing monitoring and trend analysis for notifiable conditions. These notifiable 
-        conditions include but are not limited to enteric diseases. Since 2022, WWCDCH 
-        staff have produced annual reports on all notifiable conditions which are used
-        to guide health promotion campaigns in the County. However, a backlog of data still
-        exists from the past 10+ years.</p>
-
-      <p>This project was motivated by a desire to compile a historical database 
-        of existing data from 2013 to 2023, and retrospectively extend contemporary 
-        analyses. In doing so, we hoped to better understand the direction of trends 
-        pre- and post-pandemic, and inform future public health interventions.</p>
+      <div style="width: 85%; margin: 0 auto;">
+      <h3>Introduction</h3>
       
-      <h3>Acknowledgements</h3>
+      <div class="media-float-right">
+        <a href="wwcdch_presentation.pptx" target="_blank" class="report-preview-link">
+          <div class="report-preview-card">
+            <div class="report-pptx-thumb">
+              <img 
+                src="images/wwcdch_presentation.png" 
+                alt="WWCDCH Presentation"
+                class="report-thumb-img" />
+              <div class="report-hover-overlay">
+                <span>Summary Presentation</span>
+              </div>
+            </div>
+            <p class="report-label">View the presentation</p>
+          </div>
+        </a>
+      </div>
+      
+      <p>Walla Walla County has historically experienced a relatively high burden 
+      of enteric disease relative to the rest of Washington State. These, and other 
+      notifiable conditions, are of significant public health importance due to 
+      their high virulence. Understanding the historical trends and distribution 
+      of notifiable conditions will guide public health interventions and 
+      epidemiological investigations in Walla Walla County.</p>
 
-      <p>Much thanks to the epidemiology staff at Walla Walla County Department of 
-        Community Health for supplying the data and oversight for this project. Thank 
-        you to the UW Student Epidemic Action Leaders program for making this work 
-        possible.</p>
+      <p>This project was motivated by a desire to compile a historic database 
+      of notifiable conditions data from 2013 to 2023. I then perform some basic 
+      analyses to understand which groups shoulder the greatest burden of disease 
+      in the County.</p>
+      
+      <h3>Methodology</h3>
+      <h4>Walla Walla County Counts and Incidence Rates</h4>
+      <p>Walla Walla County notifiable condition counts were compiled primarily 
+      from WDRS data. Not all notifiable conditions were used. Table S1 lists 
+      all conditions for which data was identified and compiled in the WWCDCH 
+      in-house data storage file. Hepatitis, Chlamydia, Gonorrhea, Syphilis, 
+      rare STI, and HIV case counts were obtained by request from Washington DOH 
+      and were presented in aggregated format as well as stratified by race/ethnicity, 
+      sex, and age. Enteric diseases were obtained from WDOH where they were 
+      presented by individual case with dates of illness and demographic data. 
+      Case counts for elevated childhood blood lead levels were obtained from the 
+      Washington Tracking Network data portal. Of note, WTN data was pre-suppressed 
+      for low counts, meaning there are some data holes in the Walla Walla 
+      County lead case count in-house data. Since suppression occurred at the 
+      same benchmark value (≤ 5 cases), incidence rates for the in-house data 
+      storage remained unaffected.</p>
+      
+      <p>Due to differences in the years reported from each data source, some values 
+      needed to be sourced elsewhere. Most notifiable conditions sources from WDRS 
+      were presented only from 2013 through 2023. Therefore, DOH Annual Communicable 
+      Disease reports were used to supplement 2010 through 2012 numbers. Prevalent 
+      HIV cases were not provided at the county level through DOH Communicable Disease 
+      reports prior to 2013, so this data was sourced from the CDC National Center for 
+      HIV , Viral Hepatitis, STD, and Tuberculosis Prevention (NCHHST) AtlasPlus data 
+      portal for 2010 through 2012.</p>
 
+      <p>Incidence rates were calculated per 100,000 population per the Population Interim 
+      Estimates (PIE) by Public Health – Seattle & King County. Incidence rates calculated 
+      by DOH or other data sources were not used, and were calculated within the in-house 
+      data storage file instead.</p>
+      
+      <h4>Washington State Counts and Incidence Rates</h4>
+      <p>Washington State notifiable condition counts were compiled primarily from DOH 
+      Annual Communicable Disease reports. Not all notifiable conditions were used. 
+      Table S1 lists all conditions for which data was identified and compiled 
+      in the WWCDCH in-house data storage file. Hepatitis and Syphilis case counts were 
+      obtained by request from Washington DOH and were presented in aggregated format 
+      as well as stratified by race/ethnicity, sex, and age. Case counts for elevated 
+      childhood blood lead levels were obtained from the Washington Tracking Network 
+      data portal.</p>
+
+      <p>Due to changes in Annual Communicable Disease report construction and reporting 
+      guidelines, some less common conditions such as viral hemorrhagic fevers or 
+      Anthrax had to be sourced from CDC National Notifiable Diseases Surveillance 
+      System (NNDSS) reports. Seasonal influenza deaths for Washington State were 
+      sourced from WDOH Influenza Surveillance Season Summaries.</p>
+
+      <p>Incidence rates were calculated per 100,000 population per the Population Interim 
+      Estimates (PIE) by Public Health – Seattle & King County. Incidence rates calculated 
+      by DOH or other data sources were not used, and were calculated within the in-house 
+      data storage file instead.</p>
+      
+      <h4>Notes on Data Formatting or Structure</h4>
+      
+      <ul>
+      <li>"Brucellosis" and "<i>Burkholderia</i> infection" were originally combined 
+      into one line of the `IN-HOUSE Data Storage` document. These conditions were 
+      separated. "Melioidosis" and "glanders", two similar conditions caused by species 
+      of <i>Burkholderia</i> bacteria, were included as their own lines in the storage 
+      document but not reported as such in DOH reporting. These lines were collapsed 
+      into the aggregated "Burkholderia infection" line.</li>
+      
+      <li>"Arboviral diseases" exists as an aggregate in the `IN-HOUSE Data Storage` 
+      document, but case counts for “arboviral diseases” did not include Yellow Fever 
+      or West Nile Virus as these existed separately in the document. Information was 
+      available through DOH for these conditions allowing for their consistent
+      disaggregation.</li>
+      
+      <li>"Tickborne diseases" were an aggregated case count of anaplasmosis, 
+      babesiosis, ehrlichiosis, spotted fever rickettsiosis, and tick paralysis.</li>
+      
+      <li>"Poliomyelitis" and "polio" were collapsed into “polio”.</li>
+      
+      <li>Influenza data is seasonal instead of annual. Counts and rates are listed 
+      under the year in which the flu season in question begins. For example, if Walla 
+      Walla County had 36 seasonal influenza deaths in '2010' , this indicates 36 
+      seasonal influenza deaths in the 2010 – 2011 flu season.</li>
+      
+      <li>
+      
+      Certain data holes still exist after supplementation from a wide variety of 
+      sources. The following conditions and years do not have case counts or 
+      incidences associated with them for Washington State:
+      
+      <ul>
+      
+      <li>Anthrax (2010 – 2015, 2023)</li>
+      
+      <li>Hepatitis C, perinatal (2010 – 2017)</li>
+      
+      <li>Hepatitis D (2018 – 2021)</li>
+      
+      <li>Hepatitis E (2018 – 2023)</li>
+      
+      <li>Highly Antibiotic-Resistant Organisms (HARO) (2010 – 2011)</li>
+      
+      <li>Influenza, Novel or unsubtypable strain (2010 – 2016, 2023)</li>
+      
+      <li>Unexplained Critical Illness or Death (2010 – 2023)</li>
+      
+      <li>Vaccinia Transmission (2017 – 2023)</li>
+      
+      <li>Varicella Death (2012 – 2015, 2023)</li>
+      
+      <li>Viral Hemorrhagic Fever (2010 – 2015, 2023)</li>
+      
+      </ul>
+      
+      The following conditions and years do not have case counts or incidences 
+      associated with them for Walla Walla County:
+      
+      <ul>
+      
+      <li>Lead, Child Blood (2012 – 2015, 2017 – 2018, 2020 -2023)</li>
+      
+      <li>Rabies, Suspected Human Exposure (2010)</li>
+      
+      </ul>
+      </ul>
+      
+      <h3>Results and Discussion</h3>
+     <div class = "callout">
+      <p><b>Note on rate suppression:</b> All presented tables and visualizations have been 
+      edited to ensure no small cell sizes or corresponding rates are displayed. This 
+      is to protect individuals from being re-identified in areas with a small 
+      population, as well as to control for rate instability. Suppression criteria are
+      (n ≤ 5) for general communicable diseases, and (n ≤ 16) for STIs.</p>
+      </div>
+      
+      <h4>General incidence rates in Walla Walla County</h4>
+      <p>Incidence rates for notifiable diseases in Walla Walla County are generally low,
+      with most conditions having had no cases since 2010. There are several conditions
+      which depart from the larger trend set by Washington State. These are presented 
+      in the following tables, first for 2010 - 2023, by incidence rate ratio:</p>
+      
+      <br>
+      
+      <div style="text-align: center; margin: 1.5rem 0;">
+        <img src="images/irr_historical.png" style="width: 40%; max-width: 100%; 
+        height: auto; border-radius: 8px;" />
+      </div>
+      
+      <br>
+      
+      <p>And for the last five years of extant data:</p>
+      
+      <br>
+      
+      <div style="text-align: center; margin: 1.5rem 0;">
+        <img src="images/irr_5yr.png" style="width: 40%; max-width: 100%; 
+        height: auto; border-radius: 8px;" />
+      </div>
+      
+    <br>
+
+    <p>It is worth noting that most of these IRR extremes are due to slight fluctuations 
+    from zero for Walla Walla County incidence. Walla Walla does appear to have a 
+    disproportionate incidence of Salmonellosis and Hepatitis C (HCV) in recent years. 
+    Salmonellosis incidence surged in 2019, up from 9.71 to 21.29 per 100,000, and 
+    has remained high since then. HCV incidence spiked in 2018, from a baseline near
+    50 per 100,000 to over 127 per 100,000 population. It has since returned to at or
+    below the previous Walla Walla baseline. It is notable that the confidence
+    interval for the HCV incidence rate ratio crosses a null value of 1 (0.80 - 44.13).
+    These calculations are limited by the sparseness of data available for rare 
+    conditions.</p>
+    
+    <p>Walla Walla County does have lower rates of Herpes Simplex (HSV) and Syphilis than
+    Washington State, on average. From 2010 to 2018, HSV rates hovered around 40 per
+    100,000 population in Walla Walla, but have since fallen so low as to be suppressed
+    in this presentation. Syphilis has historically maintained a rate low enough to
+    be suppressed, though in recent years has gradually declined from near 40 per 
+    100,000 in 2021 to just over 25 per 100,000 in 2023.</p>
+    
+    <p>The below is a recording of an interactive tool I built for this project. 
+    This tool is a helpful way to explore incidence rates in Walla Walla County 
+    since 2010. Gray shaded regions represent years where data is suppressed (per 
+    the criteria listed at the beginning of <b>Results</b> section). Broken 
+    segments of the line chart represent rare instances of missing data.</p>
+    
+    <br>
+  
+    <div style="text-align: center; margin: 1.5rem 0;">
+      <img src="images/lineplot.gif" style="width: 60%; max-width: 100%; 
+      height: auto; border-radius: 8px;" />
+    </div>
+
+    <br>
+    
+    <p>The top five notifiable conditions are presented in the below tables
+    for Walla Walla county. These insights are best combined with the earlier IRRs
+    to better understand which conditions constitute the major burden of disease in
+    the County. We see that chlamydia infections are far and away the most common
+    notifiable condition, and are joined at the top of the list with gonorrhea. This
+    makes good sense given the widespread prevalence of these bacterial STIs 
+    nationwide. Do take note of the square root transformation on the y-axis in the
+    below graphs in order to accommodate the chlamydia incidence.</p>
+    
+    <p>The high incidence rates for perinatal HBV and acute HCV infections are concerning,
+    and it's likely that acute HCV incidence in part drove the high IRR for HCV
+    in Walla Walla versus Washington State (5.94, 95% CI: 0.80 - 44.13).</p>
+    
+    <p>Campylobacteriosis infections remain in the top six conditions both historically
+    and in the most recent five years of data. Examine the trend using the interactive
+    tool above to see a gradual increase since 2010, punctuated by a steep increase
+    in the latter half of the 2010s and a sudden drop during the Covid pandemic. Since 
+    2020, it appears that the gradual upwards trajectory ahs resumed in Walla Walla 
+    County.</p>
+    
+    <br>
+  
+    <div style="text-align: center; margin: 1.5rem 0;">
+      <img src="images/top5_historical.png" style="width: 60%; max-width: 100%; 
+      height: auto; border-radius: 8px;" />
+    </div>
+    
+    <div style="text-align: center; margin: 1.5rem 0;">
+      <img src="images/top5_5yr.png" style="width: 60%; max-width: 100%; 
+      height: auto; border-radius: 8px;" />
+    </div>
+    
+    <br>
+    
+    <h3>Foodborne Diseases</h3>
+    
+    <div class="floated-table-left">
+      <img src="images/enteric_sex.png" style="width: 100%; height: auto; 
+      border-radius: 8px;" />
+    </div>
+    
+    <p>Foodborne illnesses for the purposes of this analysis include campylobacteriosis
+    (<em>Campylobacter spp.</em>); salmonellosis (<em>Salmonella spp.</em>); shigellosis
+    (<em>Shigella spp.</em>) and Shiga toxin-producing <em>E. coli</em> (or STEC). Notably, sex
+    data was not available for STEC cases and is thus lacking in this analysis. Of
+    these, campylobacteriosis was the most common condition. It was the sixth most
+    common notifiable condition by incidence rate both historically and in the most
+    recent five years of analysis.</p>
+    
+    <p>Incidence of foodborne illnesses were relatively evenly distributed among males
+    and females for both campylobacteriosis and salmonellosis. However, shigellosis
+    skewed heavily towards females (69%) over males (31%). This is almost certainly
+    anomalous, as there was only one year with non-suppressed data for shigellosis
+    (2019), indicating a generally low incidence and potential rate instability when
+    stratifying by sex or other factors.</p>
+    
+    <div class="floated-table-right">
+      <img src="images/enteric_age.png" style="width: 100%; height: auto; 
+      border-radius: 8px;" />
+    </div>
+    
+    <p>For both campylobacteriosis and salmonellosis, there was no discernible trend or
+    heterogeneity in distribution by age, on visual inspection. However, shigellosis
+    was concentrated heavily in the 0 to 9 age category with a general skew towards
+    younger individuals. This is similar to STEC, which had a pronounced skew towards
+    those under 20 years old. Neither of these conditions had a large number of cases
+    (STEC: n = 37; Shigellosis: n = 18), so it remains possible that individual
+    outbreaks or transmission patterns account for some of this heterogeneity. However,
+    epidemiologic literature does suggest higher incidence of both in young children.</p>
+    
+    <p>Analyzing incidence stratified by race and ethnicity proved challenging due to
+    different practices across data sources and years of collection. For example,
+    some sources sorted their data into more granular race categories, while others
+    eliminated significant portions of the population in an attempt to aggregate
+    categories. Few sources allowed for distinctions of ethnicity and race together
+    ("Black, Hispanic" vs. "Black, non-Hispanic"). This may have led to the large
+    proportion of cases marked "Other" for race and "Hispanic or Latino/a" for
+    ethnicity. However, "Other" also includes, for some datasets, individuals of
+    two or more races, and small racial groups that were not adequately described
+    amongst the provided response options. The end effect of these conflicting data
+    practices, and of standardizing race categories for the present analysis, was a
+    very high percentage of "Other" in the racial incidence data for both foodborne
+    illnesses and STIs. It will be important when considering the following results
+    to examine both the race and ethnicity data side by side for the best insights.</p>
+    
+    <p>For most foodborne diseases, the majority of cases occurred in white individuals,
+    except for Shigellosis ("Other race": 50% of cases; "White": 33.3% of cases).
+    However, in all instances, "Other race" was disproportionately represented amongst
+    the ill, indicating a significant issue of health equity. This is not entirely
+    explained by cases in the Hispanic or Latino/a population, since these cases
+    represented only a subset of the "Other race" cases. This indicates that small 
+    racial groups and multiracial individuals are also at increased risk for foodborne
+    illness in Walla Walla County.</p>
+
+    <p>The recording of the interactive tool below shows its utility for visually 
+    comparing the proportion of cases in Walla Walla County falling into each subgroup,
+    as compared to the subgroup's representation in the overall population. This 
+    visually aids the user in understanding the disparities in disease burden 
+    present in the County. An orange <b>cases</b> bar extending past the gray <b>population</b>
+    bar indicates a group holds a disproportionately <em>high</em> burden of disease. The
+    opposite, an orange <b>cases</b> bar being much smaller than the gray <b>population</b>
+    bar indicates a group holds a disproportionately <em>low</em> burden of disease.</p>
+    
+    <br>
+    
+    <div style="text-align: center; margin: 1.5rem 0;">
+      <img src="images/inequity.gif" style="width: 60%; max-width: 100%; 
+      height: auto; border-radius: 8px;" />
+    </div>
+    
+    <h3>Sexually Transmitted Infections</h3>
+    
+    <div class="floated-table-right">
+      <img src="images/sti_tabs.png" style="width: 100%; height: auto; 
+      border-radius: 8px;" />
+    </div>
+    
+    <p>STIs analysis is limited to those conditions with enough cases to avoid
+    suppression over the majority of the dataset (chlamydia, gonorrhea, total HCV,
+    and prevalent HIV). There is missingness in this data, and not all values
+    presented will total 100%.</p>
+    
+    <p>As epidemiological literature supports, we see a higher prevalence of chlamydia
+    in female individuals than in males. However, HIV prevalence and HCV are both
+    strongly skewed towards males while gonorrhea is more homogeneously distributed.</p>
+    
+    <p>Chlamydia and gonorrhea are both concentrated most densely in 20 to 29 year olds,
+    although chlamydia skews slightly towards teenagers while gonorrhea skews the
+    opposite way, into the 30 to 39 year age group. Both are rare outside of this
+    window. In contrast, HCV and HIV are both most densely concentrated in 50 to 59
+    year olds with some spillover on either side, into the 40-some and 60-some age
+    groups.</p>
+    
+    <p>The same caveats discussed for race and ethnicity in foodborne illnesses apply
+    to our analysis of sexually transmitted infections. However, the aggregation
+    problem is likely more severe simply due to the increased variety and discordance
+    of the datasets STI incidences are pulled from for this project. Notice for
+    example that DOH data provided for HCV and HIV did not include a racial category
+    for "Asian", resulting in missingness here. Again, we see large proportions of
+    STI incidence falling into the "Other" race category, which we assume comprises
+    many distinct identities with different cultural and socioeconomic experiences,
+    impacting their health outcomes in dissimilar ways.</p>
+    
+    <p>It is also important to note just how much missing data there is for racial
+    categories in the STI analysis. For example, we have racial category data for
+    less than 30% of prevalent HIV cases in Walla Walla County. This limits the
+    insights we can gain from the dataset severely.</p>
+    
+    <p>We can supplement our understanding of the incomplete racial data with the
+    available data on ethnicity. For each communicable disease, we have an estimate
+    of burden among the Hispanic or Latino/a population:</p>
+    
+    <ul>
+      <li>Chlamydia: 24.91%</li>
+      <li>Gonorrhea: 27.18%</li>
+      <li>HCV: 2.77%</li>
+      <li>HIV prevalence: 23.48%</li>
+    </ul>
+    
+    <p>For all except HCV, which likely suffers from similar issues with missing
+    ethnicity data given its lack of racial category data (total: 39.6%), there is a
+    disproportionately high burden of disease in the Hispanic or Latino/a population.
+    Despite the limitations of the data, this conclusion is likely sound given its
+    replication in the epidemiological literature.</p>
+    
+    <h3>Supplements</h3>
+
+    <h4>Table S1 — Data Sources</h4>
+    <p>Communicable diseases are listed by the data source used to inform this project.</p>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Source</th>
+          <th>Conditions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>WDRS General Communicable Disease (GCD) reports<br><br>DOH Annual Reports</td>
+          <td>
+            Anthrax; Arboviral Disease; Botulism Food; Botulism Infant; Botulism Wound;
+            Brucellosis; Burkholderia Infection (Melioidosis or Glanders); Cholera;
+            Coccidioidomycosis; Cryptococcus gattii; Cryptosporidiosis; Cyclosporiasis;
+            Diphtheria; Giardiasis; Haemophilus influenzae; Hantavirus Pulmonary Syndrome;
+            Hemolytic Uremic Syndrome (HUS); Hepatitis D; Hepatitis E, Acute; Herpes Simplex;
+            Highly Antibiotic-Resistant Organisms (HARO); Hypersensitivity Pneumonitis,
+            Occupational; Influenza, seasonal; Influenza, Novel or unsubtypable strain;
+            Legionellosis; Leptospirosis; Listeriosis; Lyme Disease; Malaria; Measles;
+            Meningococcal Disease; Mpox (Monkeypox); Mumps; Pertussis; Plague; Polio;
+            Prion Diseases, Human (CJD); Psittacosis; Q Fever; Rabies, Human; Rabies,
+            Suspected Human Exposure; Relapsing Fever; Rubella; Shellfish Poisoning,
+            Paralytic, Domoic Acid, or Diarrhetic; Tetanus; Tickborne Disease; Trichinosis;
+            Tuberculosis; Tularemia; Typhoid fever; Unexplained Critical Illness or Death;
+            Vaccinia Transmission; Varicella Death; Vibriosis; West Nile Virus Disease;
+            Yellow Fever; Yersiniosis
+          </td>
+        </tr>
+        <tr>
+          <td>PHIMS-STD via DOH request<br><br>DOH Annual Reports</td>
+          <td>
+            Chancroid; Chlamydia; Gonorrhea; Lymphogranuloma; Syphilis, All;
+            Syphilis, (Primary and Secondary); Syphilis, Early non-primary non-secondary;
+            Syphilis, Late/unknown duration; Syphilis, Congenital
+          </td>
+        </tr>
+        <tr>
+          <td>WDRS via DOH request</td>
+          <td>
+            Hepatitis A, acute; Hepatitis B, All; Hepatitis B, Acute; Hepatitis B, Chronic;
+            Hepatitis B, Perinatal; Hepatitis C, All; Hepatitis C, Acute; Hepatitis C, Chronic;
+            Hepatitis C, Perinatal
+          </td>
+        </tr>
+        <tr>
+          <td>HIV Surveillance Report via DOH request<br><br>CDC NCHHST AtlasPlus tool</td>
+          <td>
+            HIV, new cases; HIV, prevalent HIV cases
+          </td>
+        </tr>
+        <tr>
+          <td>Washington Tracking Network</td>
+          <td>Lead, Child Blood</td>
+        </tr>
+        <tr>
+          <td>DOH Data Request</td>
+          <td>
+            Campylobacteriosis; Salmonellosis; Shiga toxin-producing <em>E. coli</em> ("STEC"); Shigellosis
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Acknowledgements</h3>
+
+    <p>Much thanks to the epidemiology staff at Walla Walla County Department of 
+      Community Health for supplying the data and oversight for this project. Thank 
+      you to the UW Student Epidemic Action Leaders program for making this work 
+      possible.</p>
+        
       <div align = "center">
         <a href = "https://dch.wwcowa.gov/">
           <img src = "images/combined_logo_wwc.svg"
           alt = "Walla Walla County and SEAL Logos">
         </a>
       </div>
-
+    </div>
+    
     </section>
   </main>
   <footer>
