@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethan Hume</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-row">
+      <div>
+        <h1><a href="index.html">Ethan Hume</a></h1>
+        <p>exploring environmental health, epidemiology & evidence-based policy</p>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+
+      <div class="hero-image-container">
+        <img src="images/duwamish.jpeg" alt="Duwamish River" class="hero-image" />
+        <h2 class="hero-title">Predicting Acute Care Use After Wildfire</h2>
+        <p class="image-credit"><i>Image credit: <a rel="noopener noreferrer" class="credit-link"
+            href="https://www.flickr.com/photos/7943225@N02/30461407921">Duwamish River - North Wind&#039;s Weir at dusk 01A</a>
+            by <a rel="noopener noreferrer" class="credit-link"
+            href="https://www.flickr.com/photos/7943225@N02">Joe Mabel</a>,
+            licensed under <a rel="noopener noreferrer" class="credit-link"
+            href="https://creativecommons.org/licenses/by-sa/2.0/?ref=openverse">CC BY-SA 2.0
+            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;" />
+            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;" />
+            <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /></a></i></p>
+      </div>
+
+      <div class="callout">
+        <p>This page is under construction. Check back soon for more details.</p>
+      </div>
+
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Ethan Hume</p>
+  </footer>
+  <script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburgerBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
